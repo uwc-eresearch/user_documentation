@@ -1,2 +1,2 @@
 - [Home](/)
-- [VPN](VPN.md)
+- [Using the SANBI VPN](VPN.md)
