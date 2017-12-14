@@ -1,0 +1,2 @@
+- [Home](/)
+- [VPN](VPN.md)
