@@ -1,3 +1,4 @@
 - [Home](/)
 - [Using the SANBI VPN](VPN.md)
 - [Contact and Communication](contact.md)
+- [Requesting Help](help.md)
