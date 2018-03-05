@@ -9,7 +9,7 @@ The two steps of connecting are opening a terminal and then making the connectio
 
 If you are running Ubuntu Linux you need to open the **Terminal** application. There are two ways to do this. The quickest it the key combination **Control-Alt-T**. Hold down those three keys together and _Terminal_ will open.
 
-The second way to open _Terminal_ is via the Unity graphical menu. This can be opened by pressing the Windows key on your keyboard, which looks like this: ![alt text](_media/ctrl_super_alt.jpg "CTRL/SUPER/ALT keys") or by clicking the Ubuntu symbol ![alt text](_media/UbuntuSwirlButton.png =250x "Ubuntu Swirl Menu Key") in the top left of your screen. Then type _terminal_ to search for the _Terminal_ application and click on it to start the application.
+The second way to open _Terminal_ is via the Unity graphical menu. This can be opened by pressing the Windows key on your keyboard, which looks like this: ![alt text](_media/ctrl_super_alt.jpg "CTRL/SUPER/ALT keys") or by clicking the Ubuntu symbol ![alt text](_media/UbuntuSwirlButton.png "Ubuntu Swirl Menu Key") in the top left of your screen. Then type _terminal_ to search for the _Terminal_ application and click on it to start the application.
 
 ### Opening a Terminal on MacOS
 
