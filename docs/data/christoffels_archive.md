@@ -44,7 +44,7 @@ While **help** will show you all commands available, the most common ones are:
 
 
 | Command       | Description                                               |
-| :-----------: | --------------------------------------------------------- |
+| ------------- | --------------------------------------------------------- |
 | cd            | change directory on the archive server                    |
 | lcd           | change directory on the local server (i.e. queue00)       |
 | ls            | list directory on the archive server                      |
