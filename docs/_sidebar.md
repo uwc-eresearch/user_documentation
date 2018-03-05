@@ -1,4 +1,7 @@
 - [Home](/)
+- [Internet Connectivity](connectivity.md)
 - [Using the SANBI VPN](VPN.md)
+- [Using the SANBI Cluster](cluster_usage.md)
+- [Data storage](data.md)
 - [Contact and Communication](contact.md)
 - [Requesting Help](help.md)
