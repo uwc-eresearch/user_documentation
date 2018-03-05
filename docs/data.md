@@ -1,4 +1,6 @@
-# Storing data on the Christoffels Lab archive server
+# Data Storage
+
+## Storing data on the Christoffels Lab archive server
 
 For members of Professor Christoffels’ research group, you can use **smbclient** to copy files to and from the Christoffels lab archive server.
 
@@ -55,7 +57,7 @@ While **help** will show you all commands available, the most common ones are:
 | mkdir         | make a directory on the archive server                    |
 | !mkdir        | make a directory on the local server                      |
 
-## Recursive _get_ and _put_
+### Recursive _get_ and _put_
 
 If you want to move entire directories you can use recursive get or put operations. To do this you need to change some flags before you do your commands and because of the power of these flags we recommend not mixing them with other commands in a ‘normal’ session. We recommend: log in, do your recursive operation, log out. E.g.
 
@@ -91,7 +93,7 @@ smb: \> exit
 
 In these examples **recurse** switches recursive mode on and **prompt** switches prompting off (otherwise you will be asked whether you want to do each individual transfer). The `mget` and `mput` commands mean multiple get and put respectively.
 
-## Network tuning for large file transfers
+### Network tuning for large file transfers
 
 First, before you archive files, please compress them with `gzip`, `bzip2` or `tar` (with one of the aforementioned compression types). File types such as fastq and sam compress into a fraction of their uncompressed size. Then when you use the smbclient command add these options:
 
@@ -101,6 +103,6 @@ smbclient --socket-options='TCP_NODELAY IPTOS_LOWDELAY SO_KEEPALIVE SO_RCVBUF=13
 
 before you add the rest of the command (i.e. `-I 172.20.1.194` etc).
 
-## Using screen to remain logged in when you are away
+### Using screen to remain logged in when you are away
 
 If you are moving a lot of data it might take some time. So start a `screen` session before you run _smbclient_. Just type `screen` and then carry on working as usual. To disconnect from the session type `Ctrl-A`, followed by the `D` key and to reconnect, log into _queue00_ and type `screen -r`. Please clean up your `screen` sessions (by logging out) when you are finished with them. [Read more about screen](http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/).
