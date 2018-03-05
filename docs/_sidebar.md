@@ -1,7 +1,10 @@
-- [Home](/)
-- [Internet Connectivity](connectivity.md)
-- [Using the SANBI VPN](VPN.md)
-- [Using the SANBI Cluster](cluster_usage.md)
-- [Data storage](data.md)
-- [Contact and Communication](contact.md)
-- [Requesting Help](help.md)
+- **Internet**
+    - [SANBI Eduroam](connectivity/eduroam.md)
+    - [Using the SANBI VPN](connectivity/VPN.md)
+- **Cluster**
+    - [Logging into the headnode](cluster/login_to_queue.md)
+- **Data**
+    - [Christoffels Archive](data/christoffels_archive.md)
+- **Help and Info**
+    - [Contact and Communication](help/contact.md)
+    - [Requesting Help](help/requesting_help.md)

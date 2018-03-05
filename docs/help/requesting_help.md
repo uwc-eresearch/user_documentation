@@ -6,4 +6,4 @@ If you feel that you have an issue that you would like the technical staff to ha
 
 You can also feel free to use the SANBI Slack channel, but you will be asked to create a ticket by sending the email as mentioned regardless.
 
-You can track the progress of open tickets by going to the [SANBI Helpdesk Website](https://sanbi.ngdesk.com/)
+You can track the progress of open tickets by going to the [SANBI Helpdesk Website](https://sanbi-sa.freshdesk.com/)
