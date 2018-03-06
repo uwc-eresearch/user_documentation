@@ -14,7 +14,7 @@ The `terminal` application will act as your portal to connect to the SANBI clust
 
 If you are running ___Ubuntu Linux___ you need to open the `terminal` application. There are two ways to do this. The quickest it the key combination **Control-Alt-T**. Hold down those three keys together and `terminal` will open.
 
-The second way is via the [_Unity_](https://en.wikipedia.org/wiki/Unity_(user_interface)) graphical menu. This can be opened by pressing the _Super (Windows/Start)_ key on your keyboard, which looks like this: ![alt text](_media/ctrl_super_alt.jpg "CTRL/SUPER/ALT keys") or by clicking the Ubuntu symbol ![alt text](_media/UbuntuSwirlButton.png "Ubuntu Swirl Menu Key") in the top left of your screen. Then type `terminal` to search for the application and click on it to start the application.
+The second way is via the [_Unity_](https://en.wikipedia.org/wiki/Unity_(user_interface)) graphical menu. This can be opened by pressing the _Super (Windows/Start)_ key on your keyboard, which looks like this: ![alt text](../_media/ctrl_super_alt.jpg "CTRL/SUPER/ALT keys") or by clicking the Ubuntu symbol ![alt text](../_media/UbuntuSwirlButton.png "Ubuntu Swirl Menu Key") in the top left of your screen. Then type `terminal` to search for the application and click on it to start the application.
 
 #### On MacOS
 
@@ -70,7 +70,7 @@ The _@queue00_ after your username shows that you are now connected to the compu
 
 **PuTTY** is a SSH client for Windows that will let you connect to _queue00_. You can download [PuTTY](https://www.putty.org/) here. Download the **putty.exe** file and run it from a directory on your computer. (Unlike many other Windows applications, you run Putty by running _putty.exe_ after downloading it, there is no installation step.) After giving the program permission to run you will see a screen like this:
 
-![alt text](_media/putty_screenshot-1.png)
+![alt text](../_media/putty_screenshot-1.png)
 
 Type in **queue00.sanbi.ac.za** in the _Host Name_ field and click _Open_. You will see a screen asking you to accept the _queue00_ host fingerprint, accept this and then you will be asked for your SANBI cluster username and password. Once you have entered both of these you will see a screen showing something similar to this:
 
