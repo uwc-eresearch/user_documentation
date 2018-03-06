@@ -14,7 +14,7 @@ The `terminal` application will act as your portal to connect to the SANBI clust
 
 If you are running ___Ubuntu Linux___ you need to open the `terminal` application. There are two ways to do this. The quickest it the key combination **Control-Alt-T**. Hold down those three keys together and `terminal` will open.
 
-The second way is via the [_Unity_](https://en.wikipedia.org/wiki/Unity_(user_interface)) graphical menu. This can be opened by pressing the _Super (Windows/Start)_ key on your keyboard, which looks like this: ![alt text](../_media/ctrl_super_alt.jpg "CTRL/SUPER/ALT keys") or by clicking the Ubuntu symbol ![alt text](../_media/UbuntuSwirlButton.png "Ubuntu Swirl Menu Key") in the top left of your screen. Then type `terminal` to search for the application and click on it to start the application.
+The second way is via the [_Unity_](http://bit.ly/2oSzE5z) graphical menu. This can be opened by pressing the _Super (Windows/Start)_ key on your keyboard, which looks like this: ![alt text](../_media/ctrl_super_alt.jpg "CTRL/SUPER/ALT keys") or by clicking the Ubuntu symbol ![alt text](../_media/UbuntuSwirlButton.png "Ubuntu Swirl Menu Key") in the top left of your screen. Then type `terminal` to search for the application and click on it to start the application.
 
 #### On MacOS
 
