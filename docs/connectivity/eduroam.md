@@ -9,7 +9,7 @@
 
 When you see a eduroam hostspot in your WiFi network list, click on it to connect and you’ll this network settings dialog box:
 
-![alt text](_media/eduroam_linux.png "Eduroam prompt for Ubuntu Linux")
+![alt text](../_media/eduroam_linux.png "Eduroam prompt for Ubuntu Linux")
 
 Make sure you use these settings:
 
