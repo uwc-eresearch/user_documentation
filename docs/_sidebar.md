@@ -4,6 +4,7 @@
 - **Cluster**
     - [Logging into the headnode](cluster/login_to_queue.md)
 - **Data**
+    - [Copying Data From Outside of SANBI](data/moving_data.md)
     - [Christoffels Archive](data/christoffels_archive.md)
 - **Help and Info**
     - [Contact and Communication](help/contact.md)
