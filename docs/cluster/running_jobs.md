@@ -5,7 +5,7 @@ When running jobs on the SANBI cluster, you'll want to be logged into `queue00` 
 **DO NOT RUN JOBS DIRECTLY ON QUEUE00**.
 
 ## Creating the job file
-You can copy the information below into a file with the name of your choice, normally ending in `.sh`. Edit all of the stuff inside of the \<\> brackets and remove the brackets.
+You can copy the information below into a file with the name of your choice, normally ending in `.sh`. Edit all of the stuff inside of the <\> brackets and remove the brackets.
 
 ```bash
 #!/bin/bash
@@ -47,7 +47,7 @@ module load <packages you want>
 <if you chose miniconda, you then use: source activate toolname here>
 
 # Here you execute the tool and pass it arguments like you normally
-#    would, assuming it is reading from the directory specified above.
+# would, assuming it is reading from the directory specified above.
 <toolname> <tool flags/inputs>
 ```
 
@@ -65,7 +65,7 @@ Your output log and error log files are normally generated in the directory that
 |-l h_rt=hh:mm:ss|Maximum amount of time job may run for. hh = hours, mm = minutes, ss = seconds, e.g. 2h30m = 02:30:00|
 |-o output_file_name|The name of the standard output log file generate.|
 |-e error_file_name|The name of the standard error log file to generate.|
-**Note that all \< and \> brackets are used to reference user supplied values and should not be included in the scripts.**
+**Note that all < and \> brackets are used to reference user supplied values and should not be included in the scripts.**
 
 ## Executing and managing jobs
 
