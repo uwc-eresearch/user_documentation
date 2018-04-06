@@ -3,6 +3,7 @@
     - [Using the SANBI VPN](connectivity/VPN.md)
 - **Cluster**
     - [Logging into the headnode](cluster/login_to_queue.md)
+    - [Running jobs from the cluster](cluster/running_jobs.md)
 - **Data**
     - [Copying Data From Outside of SANBI](data/moving_data.md)
     - [Christoffels Archive](data/christoffels_archive.md)
