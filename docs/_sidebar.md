@@ -1,6 +1,8 @@
 - **Internet**
     - [SANBI Eduroam](connectivity/eduroam.md)
     - [Using the SANBI VPN](connectivity/VPN.md)
+- **Office**
+    - [Connecting to the SANBI printer](office/printer.md)
 - **Cluster**
     - [Logging into the headnode](cluster/login_to_queue.md)
     - [Running jobs from the cluster](cluster/running_jobs.md)
