@@ -13,7 +13,7 @@ SANBI hosts an OpenVPN server which users can conenct to in order to use the int
 ![Add VPN Screen showing OpenVPN option](../_media/add_vpn_screen.png)
 
 4. 
-    1. Configure the VPN. First navigate to the *Identity* tab and choose an appropriate *Name*. Set the *Gateway* to `openvpn.sanbi.ac.za`, add your SANBI cluster (LDAP)
+    1. Configure the VPN. First navigate to the *Identity* tab and choose an appropriate *Name*. Set the *Gateway* to `openvpn.sanbi.ac.za`, add your SANBI cluster (LDAP/Legacy)
     username and password (in the *User name* and *Password* fields) and select the `sanbi-ca.crt` file for the *CA certificate* option. The settings screen will look
     like this:
 
