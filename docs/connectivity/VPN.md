@@ -6,32 +6,95 @@ SANBI hosts an OpenVPN server which users can conenct to in order to use the int
 
 ## Ubuntu Linux
 
-1. Install the `network-manager-openvpn-gnome` package using the Software Manager or `sudo apt install network-manager-openvpn-gnome` in a Terminal.
-2. Fetch the files `sanbi-ca.crt` and `sanbi-ta.key` from `/cip0/software/openvpn` (accessible via `queue00.sanbi.ac.za`).
-3. Navigate to `Settings` and then `Network` and add a VPN. You will see the following screen:
+### 16.04
 
-![Add VPN Screen showing OpenVPN option](../_media/add_vpn_screen.png)
+#### Installing the packages
 
-4. 
-    1. Configure the VPN. First navigate to the *Identity* tab and choose an appropriate *Name*. Set the *Gateway* to `openvpn.sanbi.ac.za`, add your SANBI cluster (LDAP/Legacy)
-    username and password (in the *User name* and *Password* fields) and select the `sanbi-ca.crt` file for the *CA certificate* option. The settings screen will look
-    like this:
+Some software packages are required to get OpenVPN to work on Ubuntu 16.
 
-    ![OpenVPN Identity Configuration screen](../_media/openvpn_identity_settings.png)
+Open a terminal (Ctrl + Alt + T) and enter:
 
-    2. Configure *Advanced settings* by clicking the *Advanced* button on the *Identity* tab. Ensure that *Use LZO data compression* is set to *yes* on the *General* tab:
+```shell
+sudo apt install network-manager-openvpn-gnome
+```
 
-    ![OpenVPN Advanced Settings General tab](../_media/openvpn_advanced_general.png)
+Once the install is complete, you'll have new network options made available to you in the system settings.
 
-    3. Still in the *Advanced settings*, configure *TLS Authentication* and set *Advanced TLS authentication or encryption* to *Mode* *TLS-Auth*, choose `sanbi-ta.key`
-    as the *Key File*, set *Key Direction* to **1** and leave *Extra Certificates* as *None*. Finally click *Ok* to accept the *Advanced* settings.
+#### Configure the VPN
 
-    ![OpenVPN Advanced Settings TLS Authentication tab](../_media/openvpn_advanced_tls.png)
+**Download the OpenVPN profile file  [HERE](../_files/OVPN_SANBI_linux.ovpn)**.
 
-    4. Having completed the *Advanced* settings navigate to the *IPv4* tab. Ensure that *IPv4 Method* is set to *Automatic (DHCP)*, in the *DNS* settings *Automatic* is
-    set to *On*, the *Routes* setting for *Automatic* is set to *On*. Finally ensure that *Use this connection only for resources on its network* is enabled and then
-    click *Apply* to accept the OpenVPN settings.
+Open the `System Settings` dialog and select the `Network` icon. You will see the following screen:
 
-    ![OpenVPN IPv4 Settings tab](../_media/openvpn_ipv4.png)
+![Network option screen](../_media/vpn/ubuntu_16.04/1.png)
 
-5. You can now enable the VPN from the drop down in the status bar. Once you are connected you can connect to SANBI servers without going via `gate.sanbi.ac.za`.
+Click the plus icon in the lower left of the window, make sure that `VPN` is selected in the `Interface` dropdown and click `Create...` .
+
+![Add interface screen](../_media/vpn/ubuntu_16.04/2.png)
+
+In the dropdown (shown below), select `Import a saved VPN configuration...`, click `Create...`, select the downloaded `OVPN_SANBI_linux.ovpn` file and click `Open`.
+
+![Add VPN type selection](../_media/vpn/ubuntu_16.04/3.png)
+![Select OVPN file screen](../_media/vpn/ubuntu_16.04/4.png)
+
+A new window will pop up where you must type your authentication credentials (**without @sanbi.ac.za**) under the `User name:` and `Password:` fields. Click `Save` when done.
+
+![VPN credentials screen](../_media/vpn/ubuntu_16.04/5.png)
+
+**_OPTIONAL:_ You can allow this VPN to only provide the IP addresses from within SANBI and not route all of your traffic through SANBI. To do this, go to the `IPv4 Settings` tab in the window above followed by `Routes...`, tick on `Use this connection only for resources on its network` and click `OK` followed by `Save`.**
+
+You can now connect to the SANBI VPN from the network dropdown.
+
+![Connect to VPN](../_media/vpn/ubuntu_16.04/6.png)
+
+### 17.10+
+
+Since Ubuntu 17.10 onwards introduced the Gnome desktop manager instead of the old Unity desktop manager, the way to add and connect to VPNs has changed slightly.
+
+#### Installing the packages
+
+You'll need to ensure that the appropriate apt repositories are enabled before you can install all the OpenVPN packages:
+
+```shell
+
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+sudo apt update
+```
+
+Open a terminal (Ctrl + Alt + T), enter:
+
+```shell
+sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome
+```
+and hit enter. This will install the client packages for OpenVPN on your machine.
+
+Once the installation is complete, run the following command to restart the networking service:
+
+```shell
+sudo service network-manager restart
+```
+
+#### Configure the VPN
+
+**Download the OpenVPN profile file [HERE](../_files/OVPN_SANBI_linux.ovpn)**.
+
+ Open the system `Settings` dialog and select the `Network` tab on the left. You'll see the `VPN` heading.
+
+![Ubuntu 18 settings dialog](../_media/vpn/ubuntu_18.04/1.png)
+
+Click the `+` icon to the right of the heading and select the `Import from file...` option.
+
+![Ubuntu 18 Import OVPN profile](../_media/vpn/ubuntu_18.04/2.png)
+
+Select the `OVPN_SANBI_linux.ovpn` file in the dialog box that opens and click `Open`.
+
+A new window will pop up where you must type your authentication credentials (**without @sanbi.ac.za**) under the `User name` and `Password` fields. Click `Add` when done.
+
+![Ubuntu 18 OVPN credentials](../_media/vpn/ubuntu_18.04/3.png)
+
+**_OPTIONAL:_ You can allow this VPN to only provide the IP addresses from within SANBI and not route all of your traffic through SANBI. To do this, go to the `IPv4` tab in the window above, tick on `Use this connection only for resources on its network` and click `Add`.**
+
+You will now see your VPN connection listed under the `VPN` heading. You'll now be able to connect to the SANBI VPN.
+
+![Ubuntu 18 OVPN connect](../_media/vpn/ubuntu_18.04/4.png)
