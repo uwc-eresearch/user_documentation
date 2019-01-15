@@ -28,7 +28,7 @@ Open the `System Settings` dialog and select the `Network` icon. You will see th
 
 ![Network option screen](../_media/vpn/ubuntu_16.04/1.png)
 
-Press the plus icon in the lower left of the window, make sure that `VPN` is selected in the `Interface` dropdown and click `Create...` .
+Click the plus icon in the lower left of the window, make sure that `VPN` is selected in the `Interface` dropdown and click `Create...` .
 
 ![Add interface screen](../_media/vpn/ubuntu_16.04/2.png)
 
@@ -40,6 +40,8 @@ In the dropdown (shown below), select `Import a saved VPN configuration...`, cli
 A new window will pop up where you must type your authentication credentials (**without @sanbi.ac.za**) under the `User name:` and `Password:` fields. Click `Save` when done.
 
 ![VPN credentials screen](../_media/vpn/ubuntu_16.04/5.png)
+
+**_OPTIONAL:_ You can allow this VPN to only provide the IP addresses from within SANBI and not route all of your traffic through SANBI. To do this, go to the `IPv4 Settings` tab in the window above followed by `Routes...`, tick on `Use this connection only for resources on its network` and click `OK` followed by `Save`.**
 
 You can now connect to the SANBI VPN from the network dropdown.
 
@@ -90,6 +92,8 @@ Select the `OVPN_SANBI_linux.ovpn` file in the dialog box that opens and click `
 A new window will pop up where you must type your authentication credentials (**without @sanbi.ac.za**) under the `User name` and `Password` fields. Click `Add` when done.
 
 ![Ubuntu 18 OVPN credentials](../_media/vpn/ubuntu_18.04/3.png)
+
+**_OPTIONAL:_ You can allow this VPN to only provide the IP addresses from within SANBI and not route all of your traffic through SANBI. To do this, go to the `IPv4` tab in the window above, tick on `Use this connection only for resources on its network` and click `Add`.**
 
 You will now see your VPN connection listed under the `VPN` heading. You'll now be able to connect to the SANBI VPN.
 
