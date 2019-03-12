@@ -22,7 +22,7 @@ Once the install is complete, you'll have new network options made available to 
 
 #### Configure the VPN
 
-**Download the OpenVPN profile file  [HERE](../_files/OVPN_SANBI_linux.ovpn)**.
+**Download the OpenVPN profile file  [HERE](https://raw.githubusercontent.com/SANBI-SA/user_documentation/master/docs/_files/OVPN_SANBI_linux.ovpn)**.
 
 Open the `System Settings` dialog and select the `Network` icon. You will see the following screen:
 
@@ -77,7 +77,7 @@ sudo service network-manager restart
 
 #### Configure the VPN
 
-**Download the OpenVPN profile file [HERE](../_files/OVPN_SANBI_linux.ovpn)**.
+**Download the OpenVPN profile file [HERE](https://raw.githubusercontent.com/SANBI-SA/user_documentation/master/docs/_files/OVPN_SANBI_linux.ovpn)**.
 
  Open the system `Settings` dialog and select the `Network` tab on the left. You'll see the `VPN` heading.
 
