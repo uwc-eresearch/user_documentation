@@ -1,6 +1,8 @@
 - **Internet**
     - [SANBI Eduroam](connectivity/eduroam.md)
-    - [Using the SANBI VPN](connectivity/VPN.md)
+    - [UWC Eduroam](connectivity/uwc_eduroam.md)
+    - [SANBI VPN](connectivity/VPN.md)
+    - [UWC VPN](connectivity/uwc_VPN.md)
 - **Office**
     - [Connecting to the SANBI printer](office/printer.md)
 - **Cluster**
