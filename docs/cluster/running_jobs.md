@@ -93,10 +93,26 @@ edebeste@queue:~$ squeue
               1221      main    sleep edebeste  R       0:19      1 cmc2-04-hpc.sanbi.ac.za
 ```
 
+You can also filter getting job information by users so that you don't get other people's jobs in the list. To do this you can use `squeue -u <username>`, for example: `squeue -u edebeste`.
+
 If you want to stop a job, copy the `JOBID` for your respective job, and use it with `scancel`. E.g:
 ```bash
 edebeste@queue:~$ scancel 1221
 ```
+
+The following table summarizes the common statuses that you will see under the `ST` section in the `squeue` output:
+
+| STATUS CODE | MEANING                             |
+|:-----------:|-------------------------------------|
+| R           | Job is running                      |
+| S           | Job is allocated but suspended      |
+| CD          | Job is in the process of completing |
+| PD          | Job is waiting for free resources   |
+| TO          | Job killed due to time limit        |
+| F           | Job failed                          |
+| OOM         | Job ran out of memory               |
+
+More detail is available here: https://slurm.schedmd.com/squeue.html#SECTION_JOB-STATE-CODES
 
 ## Running interactive jobs
 
