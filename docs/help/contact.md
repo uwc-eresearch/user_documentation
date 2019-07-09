@@ -22,6 +22,7 @@ Contact information for each SANBI staff member is as followed:
 |Dr. Junaid Gamieldien   |junaid_at_sanbi.ac.za  |3910       |
 |Dr. Gordon Harkins      |gordon_at_sanbi.ac.za  |2096       |
 |Prof. Simon Travers     |simon_at_sanbi.ac.za   |2940       |
+|Dr. Ravnit Grewal       |ravnit_at_sanbi.ac.za  |2803       |
 
 ### Technical
 
@@ -38,6 +39,5 @@ Contact information for each SANBI staff member is as followed:
 
 |Person                  |Email                  |Short Code |
 |------------------------|:---------------------:|----------:|
-|Margaret Kumalo         |margaret_at_sanbi.ac.za|2998       |
+|Fungiwe Mpithi          |fungiwe_at_sanbi.ac.za |2998       |
 |Ferial Mullins          |ferial_at_sanbi.ac.za  |2808       |
-|Maryam Salie            |maryam_at_sanbi.ac.za  |2803       |

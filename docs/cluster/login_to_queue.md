@@ -36,10 +36,10 @@ ssh <username>@queue
 
 The **username** should be your SANBI cluster username. These usernames are based on the first letter of your first name and your complete surname, e.g. **edebeste**. If your username does not work, please check with IT that your account is activated.
 
-You may receive a warning message like this:
+You may receive a warning message similar to this:
 
 ```bash
-The authenticity of host 'queue00 (192.168.2.42)' can't be established.
+The authenticity of host 'queue (192.168.2.42)' can't be established.
 ECDSA key fingerprint is e4:87:c2:ca:5e:57:8b:1a:83:44:a4:b5:2d:11:aa:31.
 Are you sure you want to continue connecting (yes/no)?
 ```
