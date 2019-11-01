@@ -18,10 +18,10 @@ $ srun --pty bash
 Singularity is then available from the compute node. You can open a session within an available container using the following:
 
 ```shell
-$ singularity shell /software/containers/casa-stable.img
+$ singularity shell /software/containers/ASTRO-PY.simg
 ```
 
-This command will spawn a new shell inside the container, in this case the `casa-stable` container, allowing the user to interact with the container environment. The user can then run software that is housed in the container and develop workflows interactively.
+This command will spawn a new shell inside the container, in this case the `ASTRO-PY` container, allowing the user to interact with the container environment. The user can then run software that is housed in the container and develop workflows interactively.
 
 ## Exec command
 

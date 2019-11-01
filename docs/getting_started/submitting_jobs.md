@@ -1,10 +1,10 @@
-#Running a job on the cluster
+# Running a job on the cluster
 
 Two common ways to run jobs on SLURM include submitting jobs using a batch script, and running jobs interactively. Submitting jobs using a batch script allows for multiple jobs to be submitted in parallel, or for a series of jobs to be submitted, where one job may depend on the output of a previous job. Interactive jobs are useful for developing workflows or scripts, or working with software interactively. **Please note that no software should be run on the SLURM head node (login node).**
 
 ## Submitting a job using a batch script
 
-After `sshing` into `slurm.ilifu.ac.za`, you can submit a job to SLURM using a shell script. The script must describe the application/software you wish to run as well as the resources that you wish to allocate to the job.
+After sshing into `master01.maas.hpc1.uwc.ac.za`, you can submit a job to SLURM using a shell script. The script must describe the application/software you wish to run as well as the resources that you wish to allocate to the job.
 
 Let us assume that you are trying to run a python script, `myscript.py` with the following contents:
 
@@ -93,7 +93,7 @@ This will open an interactive session on a compute node and open the ASTRO-PY.si
 Incidently, you can also submit non-interactive jobs to SLURM using the `srun` command without the `--pty` parameter, for example:
 
 ```shell
-	$ srun singularity exec /idia/software/containers/ASTRO-PY.simg python myscript.py
+	$ srun singularity exec /software/containers/ASTRO-PY.simg python myscript.py
 ```
 
 This will run the Python script `myscript.py` using the ASTRO-PY container on a compute node, similar to the `sbatch` command, however the job will not be run in the background, but will utilize your current terminal.
