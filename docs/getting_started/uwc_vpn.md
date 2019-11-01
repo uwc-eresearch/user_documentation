@@ -10,23 +10,23 @@ To download the GlobalProtect VPN client, go to https://vpn.uwc.ac.za.
 
 Log in to the GlobalProtect Portal using your UWC network credentials (Novell login credentials). If you are uncertain about these credentials please contact servicedesk@uwc.ac.za for information.
 
-<img src="http://docs.meerkat.uwc.ac.za/_media/vpn1.png" alt="GlobalProtect Portal login" width=500 />
+<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn1.png" alt="GlobalProtect Portal login" width=275 /></div>
 
 Download the relevant GlobalProtect agent depending on your operating system.
 
-<img src="http://docs.meerkat.uwc.ac.za/_media/vpn2.png" alt="GlobalProtect by OS download" width=500 />
+<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn2.png" alt="GlobalProtect by OS download" width=450 /></div>
 
 Install the VPN client. After the installation is complete, open the GlobalProtect VPN client. Type the VPN portal address vpn.uwc.ac.za in the input field and clidck "Connect".
 
-<img src="http://docs.meerkat.uwc.ac.za/_media/vpn3.png" alt="GlobalProtect portal address" width=500 />
+<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn3.png" alt="GlobalProtect portal address" width=275 /></div>
 
 Enter your network credentials and then click "Sign In".
 
-<img src="http://docs.meerkat.uwc.ac.za/_media/vpn4.png" alt="GlobalProtect sign in" width=500 />
+<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn4.png" alt="GlobalProtect sign in" width=300 /></div>
 
 The status of the GlobalProtect VPN client should change to "Connected".
 
-<img src="http://docs.meerkat.uwc.ac.za/_media/vpn5.png" alt="GlobalProtect status" width=500 />
+<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn5.png" alt="GlobalProtect status" width=275 /></div>
 
 ### Linux users
 
