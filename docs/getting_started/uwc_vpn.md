@@ -22,7 +22,7 @@ Install the VPN client. After the installation is complete, open the GlobalProte
 
 Enter your network credentials and then click "Sign In".
 
-<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn4.png" alt="GlobalProtect sign in" width=300 /></div>
+<div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn4.png" alt="GlobalProtect sign in" width=375 /></div>
 
 The status of the GlobalProtect VPN client should change to "Connected".
 
