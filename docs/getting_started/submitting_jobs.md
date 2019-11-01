@@ -31,7 +31,7 @@ singularity exec /software/containers/ASTRO-PY.simg python myscript.py
 
 The parameters that follow `#SBATCH` indicate the requested resources and other job parameters such as the job name and logging information. The `%j` in the output log file names is a placeholder for the job number or `jobid`. Run the  `sbatch --help` command from the terminal to see additional parameters. Other useful parameters include:
 
-| Syntax                               | Meaning                                   | 
+| Syntax                               | Description                               | 
 |--------------------------------------|-------------------------------------------|
 | --ntasks=&#60;number&#62;            | Number of processes to run (default is 1) | 
 | --mem-per-cpu=&#60;number&#62;       | Memory per processor core                 | 
@@ -64,11 +64,9 @@ To see the status of the jobs in the SLURM queue associated with your account us
 
 If any errors occur while running the job, you can view the logs in the `testjob-<jobid>-stderr.log`, and any text output can be found in `testjob-<jobid>-stdout.log`, as described by the shell script. This is useful for debugging any issues with your job.
 
-## Running a job interactively
+## Running a job interactively with srun
 
 **No software should be run on the SLURM head node.** Interactive jobs are useful for testing and developing code. 
-
-### Interactive session without X11 support
 
 For an interative session on the SLURM cluster the `srun` command can be used as follows, from the SLURM head node:
 
