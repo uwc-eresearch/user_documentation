@@ -1,16 +1,12 @@
-- **Internet**
-    - [SANBI Eduroam](connectivity/eduroam.md)
-    - [UWC Eduroam](connectivity/uwc_eduroam.md)
-    - [SANBI VPN](connectivity/VPN.md)
-    - [UWC VPN](connectivity/uwc_VPN.md)
-- **Office**
-    - [Connecting to the SANBI printer](office/printer.md)
+- **Getting Started**
+    - [UWC VPN](getting_started/uwc_vpn.md)
+    - [Requesting Access](getting_started/requesting_access.md)
+    - [Accessing the cluster](getting_started/accessing_cluster.md)
+    - [Cluster Structure](getting_started/clusters_structure.md)
+    - [Directory Structure](getting_started/directory_structure.md)
+    - [Software Containers](getting_started/software_containers.md)
+    - [Running jobs on the cluster](getting_started/submitting_jobs)
 - **Cluster**
-    - [Logging into the headnode](cluster/login_to_queue.md)
-    - [Running jobs from the cluster](cluster/running_jobs.md)
 - **Data**
-    - [Copying Data From Outside of SANBI](data/moving_data.md)
-    - [Christoffels Archive](data/christoffels_archive.md)
+    - [Copying Data To & From Meerkat Cluster](data/moving_data.md)
 - **Help and Info**
-    - [Contact and Communication](help/contact.md)
-    - [Requesting Help](help/requesting_help.md)

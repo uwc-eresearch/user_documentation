@@ -1,8 +1,6 @@
-SANBI User Documentation
+Meerkat Cluster User Documentation
 ========================
 
-Welcome to the SANBI user documentation repository.
+Welcome to the Meerkat Cluster user documentation repository.
 
-All the information that a user at SANBI may need
-in order to use the systems and services at SANBI
-will be noted here over time.
+This user documentation site guides users on technical and procedural aspects relating to the use of the Meerkat cluster computing facility.

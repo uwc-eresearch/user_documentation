@@ -1,49 +1,46 @@
-# Copying data from inside of the SANBI network to outside (vice versa)
+#Copying data to and from the Meerkat cluster
 
-You might find yourself in the need to move data from a server inside of the SANBI network to your local machine, you vice versa.
+You might find yourself in the need to move data to or from the Meerkat cluster.
 
-Since `gate.sanbi.ac.za` does not contain any user data (for security purposes), you will need to create a tunnel through gate to access a server inside of the SANBI network directly. To do this, use the following command:
+##Copying data from your local storage to Meerkat cluster (and vice versa)
+
+You can copy data between your local storage on your laptop or desktop to the Meerkat cluster using `scp`. `scp` uses the same authentication and security as `ssh`, and requires a source and destination to be specified, for example, from the terminal on your laptop the following command
 
 ```bash
-ssh -L<port_number>:queue.sanbi.ac.za:22 <username_of_gate>@gate.sanbi.ac.za
+$ scp /path/to/source <username>@master01.maas.hpc1.uwc.ac.za:/path/to/destination
 ```
-Replace <port_number> with a random 4 digit number and <username> with your SANBI system username.
+will copy the specified source file on your local storage to the specified destination on the Meerkat cluster. Note, you must have write permissions at the specified destination on Meerkat.
 
-Once this is done, you will be logged into the `gate` machine like a normal SSH session. You now need to a new terminal (leaving the connection to gate open in the other one) and type the following into the new terminal window (**which should be logged into your laptop NOT gate**):
-
-```bash
-scp -P <port_number> <username_of_queue>@127.0.0.1:<remote_directory_or_file_to_copy> <location_on_your_computer_to_place>
-```
-Replace <port_number> with the number you entered earlier, <remote_directory_or_file_to_copy> with the full directory of the data you want to copy from SANBI and <location_on_your_computer_to_place> with the directory you want to place to data on your local computer.
-
-The reverse can be done to place a file in the SANBI network:
+Similarly you can copy data from the Meerkat cluster to your local storage using
 
 ```bash
-scp -P <port_number> <location_on_your_computer_to_place> <username_of_queue>@127.0.0.1:<remote_directory_or_file_to_copy>
-````
-
-For example:
-
-I want to copy a file `datafile.tar.gz` from my `/usr/people/edebeste` directory on the SANBI cluster. I would do the following:
-
-1. Open a terminal and type:
-
-```bash
-ssh -L1234:queue.sanbi.ac.za:22 eugene@gate.sanbi.ac.za
+$ scp <username>@master01.maas.hpc1.uwc.ac.za:/path/to/source /path/to/destination
 ```
 
-2. Open a new terminal and type:
+##Copying data from the ilifu cluster to the Meerkat cluster (and vice versa)
+
+In order to `scp` between the ilifu cluster and the Meerkat cluster `ssh` authentication and security needs to exist between the two clusters. To set this up a user must create a new ssh key pair on the Meerkat cluster. Once you have logged in to the Meerkat cluster, generate an ssh key pair for the purposes of transferring data using the following command, replacing your email as necessary:
 
 ```bash
-scp -P 1234 edebeste@127.0.0.1:/usr/people/edebeste/datafile.tar.gz ./datafile.tar.gz
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-The file will now be copied straight to my computer.
 
----
+You must then copy the contents of the ssh public key file to the `authorized_keys` file in your home directory on the ilifu cluster. To do this, copy the contents of the `~/.ssh/id_rsa.pub` file on the Meerkat cluster and place the contents in the `~/.ssh/authorized_keys` file on the ilifu cluster. Now you can test that `ssh` authentication between the Meerkat cluster and ilifu cluster is set up by sshing from the Meerkat cluster to the ilifu cluster, for example, from the Meerkat cluster head node:
 
-You can ensure the data that you have copied is not corrupt by using the `md5sum` command. This command will compute a digital signature that you can use to compare the data. To do this:
+```bash
+$ ssh <username>@transfer.ilifu.ac.za
+```
 
-- Log onto the machine that has the data you want to copy and go to the directory that holds your data.
-- Run `md5sum <data_file>` and you will get a result of some string that contains letter and numbers after some time has passed.
-- Once the data is copied, go to the machine that the data was copied to and run the same `md5sum <data_file>` command on that machine.
-- If the data is copied with no corruption you should see the same string that contains letter and numbers as you saw before. **It should be 100% identical**.
+If this is successful, you can now `scp` data from the ilifu cluster to the Meerkat cluster using `scp`. From the Meerkat cluster, you can transfer data from the ilifu cluster to the Meerkat cluster using:
+
+```bash
+$ scp <username>@transfer.ilifu.ac.za:/path/to/source /path/to/destination 
+``` 
+
+Or to transfer data from the Meerkat cluster to the ilifu cluster, on the Meerkat cluster use:
+
+```bash
+$ scp /path/to/source  <username>@transfer.ilifu.ac.za:/path/to/destination
+```
+
+Please use the `transfer.ilifu.ac.za` server when copying files to and from the ilifu cluster. **Do not use the ilifu SLURM head node to transfer data.**
