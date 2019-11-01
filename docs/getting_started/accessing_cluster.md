@@ -1,10 +1,10 @@
-#Accessing the Meerkat Cluster
+# Accessing the Meerkat Cluster
 
 The Meerkat cluster is accessed via `ssh` at `master01.maas.hpc1.uwc.ac.za`.
 
 Users can ssh to the Meerkat cluster from the terminal using
 
-```
+```bash
 $ ssh <username>@master01.maas.hpc1.uwc.ac.za
 ```
 

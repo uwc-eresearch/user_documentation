@@ -1,4 +1,4 @@
-#Directory Structure
+# Directory Structure
 
 The following describes the directory structure on the Meerkat cluster.
 
