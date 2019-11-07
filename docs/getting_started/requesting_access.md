@@ -8,7 +8,7 @@ This is a Gitea service where you will have a user profile for the Meerkat clust
 
 ## Upload your ssh public key
 
-An ssh key pair is used for authentication when logging into the Meerkat Cluster. When you create a ssh key pair you create a private and public key. Never share your private key with anyone. Follow these [instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to generate an ssh key pair.
+An ssh key pair is used for authentication when logging into the Meerkat cluster. When you create a ssh key pair you create a private and public key. Never share your private key with anyone. Follow these [instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to generate an ssh key pair.
 
 On the Gitea portal:
 
@@ -26,4 +26,4 @@ On the Gitea portal:
 * Go to `hpc1 / repo1` -> `Issues` -> `New Issue`.
 * In the `Title` field enter "join" and click `Create Issue`.
 
-Administration will be alerted and will confirm your access to the Meerkat cluster.
+The cluster administrators will be alerted and will confirm your access to the Meerkat cluster.
