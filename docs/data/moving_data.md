@@ -31,7 +31,7 @@ You must then copy the contents of the ssh public key file to the `authorized_ke
 $ ssh <username>@transfer.ilifu.ac.za
 ```
 
-If this is successful, you can now `scp` data from the ilifu cluster to the Meerkat cluster using `scp`. From the Meerkat cluster, you can transfer data from the ilifu cluster to the Meerkat cluster using:
+If this is successful we know that `ssh` and `scp` will work from the Meerkat cluster to the ilifu cluster. Exit your `ssh` session on the transfer node. You can now `scp` data from the ilifu cluster to the Meerkat cluster using `scp`. From the Meerkat cluster, you can transfer data from the ilifu cluster to the Meerkat cluster using:
 
 ```bash
 $ scp <username>@transfer.ilifu.ac.za:/path/to/source /path/to/destination 
