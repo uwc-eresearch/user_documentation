@@ -7,14 +7,14 @@ You might find yourself in the need to move data to or from the Meerkat cluster.
 You can copy data between your local storage on your laptop or desktop to the Meerkat cluster using `scp`. `scp` uses the same authentication and security as `ssh`, and requires a source and destination to be specified, for example, from the terminal on your laptop the following command
 
 ```bash
-$ scp /path/to/source <username>@master01.maas.hpc1.uwc.ac.za:/path/to/destination
+$ scp /path/to/source <username>@mmeerkat.uwc.ac.za:/path/to/destination
 ```
 will copy the specified source file on your local storage to the specified destination on the Meerkat cluster. Note, you must have write permissions at the specified destination on Meerkat.
 
 Similarly you can copy data from the Meerkat cluster to your local storage using
 
 ```bash
-$ scp <username>@master01.maas.hpc1.uwc.ac.za:/path/to/source /path/to/destination
+$ scp <username>@mmeerkat.uwc.ac.za:/path/to/source /path/to/destination
 ```
 
 ## Copying data from the ilifu cluster to the Meerkat cluster (and vice versa)

@@ -1,6 +1,6 @@
 # Accessing the Meerkat Cluster
 
-The Meerkat cluster is accessed via `ssh` at `meerkat.uwc.ac.za`.
+The Meerkat cluster is accessed via `ssh` at `meerkat.uwc.ac.za`. Your username will be the same as your UWC Network username.
 
 Users can ssh to the Meerkat cluster from the terminal using
 

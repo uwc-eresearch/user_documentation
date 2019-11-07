@@ -1,6 +1,8 @@
 # UWC VPN
 
-To access the Meerkat cluster account creation portal and to connect to the Meerkat cluster the user must be connected to the UWC VPN.
+To access the Meerkat cluster account creation portal you must either be on a wired connection on UWC campus or be connected to the UWC VPN.
+
+If you cannot access the Meerkat cluster account creation portal at http://pubkeys.uwc.ac.za:3000 try downloading the UWC VPN client.
 
 ## Download the VPN client
 
