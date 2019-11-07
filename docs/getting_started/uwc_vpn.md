@@ -1,6 +1,6 @@
 # UWC VPN
 
-To access the Meerkat Cluster account creation portal and to connect to the Meerkat Cluster the user must be connected to the UWC VPN.
+To access the Meerkat cluster account creation portal and to connect to the Meerkat cluster the user must be connected to the UWC VPN.
 
 ## Download the VPN client
 
@@ -16,7 +16,7 @@ Download the relevant GlobalProtect agent depending on your operating system.
 
 <div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn2.png" alt="GlobalProtect by OS download" width=450 /></div>
 
-Install the VPN client. After the installation is complete, open the GlobalProtect VPN client. Type the VPN portal address vpn.uwc.ac.za in the input field and clidck "Connect".
+Install the VPN client. After the installation is complete, open the GlobalProtect VPN client. Type the VPN portal address `vpn.uwc.ac.za` in the input field and clidck "Connect".
 
 <div style="text-align:center"><img src="http://docs.meerkat.uwc.ac.za/_media/vpn3.png" alt="GlobalProtect portal address" width=275 /></div>
 
