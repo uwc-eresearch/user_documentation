@@ -10,3 +10,5 @@
 - **Data**
     - [Copying Data To & From Meerkat Cluster](data/moving_data.md)
 - **Help and Info**
+    - [Contact](help/contact.md)
+    - [Requesting help](help/requesting_help.md)
