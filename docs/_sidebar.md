@@ -1,11 +1,12 @@
 - **Getting Started**
+    - [Access request form](getting_started/request_form.md)
     - [UWC VPN](getting_started/uwc_vpn.md)
-    - [Requesting Access](getting_started/requesting_access.md)
+    - [Create an Account](getting_started/create_account.md)
     - [Accessing the cluster](getting_started/accessing_cluster.md)
     - [Cluster Structure](getting_started/cluster_structure.md)
     - [Directory Structure](getting_started/directory_structure.md)
     - [Software Containers](getting_started/software_containers.md)
-    - [Running jobs on the cluster](getting_started/submitting_jobs)
+    - [Running Jobs on the Cluster](getting_started/submitting_jobs)
 - **Cluster**
 - **Data**
     - [Copying Data To & From Meerkat Cluster](data/moving_data.md)
