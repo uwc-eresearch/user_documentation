@@ -1,10 +1,10 @@
-# Requesting access
+# Create an account
 
-To request an account on the Meerkat cluster, go to http://pubkeys.uwc.ac.za:3000.
+To create an account on the Meerkat cluster, go to http://pubkeys.uwc.ac.za:3000.
 
-Log in with your UWC network credentials. 
+Log in with your UWC network credentials. Your UWC network username will be your username on the Meerkat cluster.
 
-This is a Gitea service where you will have a user profile for the Meerkat cluster. Here you can manage your ssh keys and request access to the Meerkat cluster.
+This is a Gitea portal where you will have a user profile for the Meerkat cluster. Here you can manage your ssh keys and request access to the Meerkat cluster.
 
 ## Upload your ssh public key
 
