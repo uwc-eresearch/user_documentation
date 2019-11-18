@@ -1,5 +1,5 @@
 - **Getting Started**
-    - [Access request form](getting_started/request_form.md)
+    - [Access Request Form](getting_started/request_form.md)
     - [UWC VPN](getting_started/uwc_vpn.md)
     - [Create an Account](getting_started/create_account.md)
     - [Accessing the cluster](getting_started/accessing_cluster.md)
