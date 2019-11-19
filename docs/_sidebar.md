@@ -8,6 +8,7 @@
     - [Software Containers](getting_started/software_containers.md)
     - [Running Jobs on the Cluster](getting_started/submitting_jobs)
 - **Cluster**
+    - [Cluster Specifications](cluster/cluster_specifications.md)
 - **Data**
     - [Copying Data To & From Meerkat Cluster](data/moving_data.md)
 - **Help and Info**
