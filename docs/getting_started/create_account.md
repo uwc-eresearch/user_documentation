@@ -1,5 +1,7 @@
 # Create an account
 
+Please make sure to have completed the [webform](https://docs.google.com/forms/d/e/1FAIpQLSe-fgPbGS_-TnqfKVXwqHbFlCAST5tlvtuunNQ8kO7TX3K6yg/viewform) before requesting an account on the Meerkat Cluster.
+
 To create an account on the Meerkat cluster, go to http://pubkeys.uwc.ac.za:3000.
 
 Log in with your UWC network credentials. Your UWC network username will be your username on the Meerkat cluster.
