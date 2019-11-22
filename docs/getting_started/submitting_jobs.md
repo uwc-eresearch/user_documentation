@@ -20,8 +20,8 @@ Create a shell script, `my_slurm_script.sh` with the following:
 #!/bin/bash
 
 #SBATCH --job-name='testjob'
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=64GB
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=16GB
 #SBATCH --output=testjob-%j-stdout.log
 #SBATCH --error=testjob-%j-stderr.log
 
@@ -37,7 +37,7 @@ The parameters that follow `#SBATCH` indicate the requested resources and other 
 | --mem-per-cpu=&#60;number&#62;       | Memory per processor core                 | 
 | --partition=&#60;partition_name&#62; | Request specific partition/queue          | 
 
-* a nodes refer to a single compute node or slurm worker, i.e. one node has 32 CPUs and 236 GB RAM
+* a nodes refer to a single compute node or slurm worker, i.e. one node has 48 CPUs and 256 GB RAM
 * a task is an instance of a running program, generally you will only want one task, unless you use software with MPI support (for example CASA), SLURM works with MPI to manage parallelised processing of data.
 * CPUs refers to the the number of CPUs associated with your job.
 * default parameters, if not specified, include 1 node, 1 task, 1 CPU and 8GB RAM.
@@ -111,3 +111,32 @@ An example work flow for an interactive session can be described as follows:
 * run tmux (or screen)
 * use the srun command to allocate yourself a compute node, describing your required resources
 * open a Singularity container and run your software.
+
+
+## Specifying Resources when running jobs on SLURM
+
+When running a job using an `sbatch` script or using `srun` or `salloc` for an interactive job, a user is able to specify the resources required for their job. A single node consists of `48 CPUs` and `256 GB RAM`. These are the maximum number of resources that can be requested per node.
+
+If you are running a normal job on SLURM, **without** `MPI` or `OpenMP`, your job will only require `1 CPU`, `1 task` and `1 node`. These values are default values when running a job, however you are able to specify additional memory for your job using the `--mem` parameter.
+
+Parallelism on the cluster can be achieved on a single node or over multiple nodes. Parallelism on a single node distributes work over multiple CPUs and is typically implemented using `OpenMP`. If you are running a job with software that utilizes `OpenMP` on SLURM, you can increase the number of CPUs for your job to > 1 CPU, while still using `1 task` and `1 node`. You may need to `export OMP_NUM_THREADS=<N>` to specify the number of threads the software will utilize.
+
+Parallelism on the cluster can also occur by distributing work over many tasks that operate on 1 or more nodes. This type of parallelism is typically implemented using `MPI`. If you are running a job with software that utilizes `MPI` on SLURM, you can increase the number of `tasks` your job uses, `> 1 task`, while `nodes` and `CPUs` can be 1. The number of CPUs per task can be specified. You can increase the number of nodes if you want more than `48 CPUs` or `256 GB RAM`. 
+
+The following table lists the parameters that can be used to decribe the required resources for your job:
+
+| Syntax                               | Meaning                                        | 
+|--------------------------------------|------------------------------------------------|
+| --mem=&#60;number&#62;*              | Minimum amount of memory (default is 8GB)      |
+| --mem-per-cpu=&#60;number&#62;*      | Memory per processor core                      | 
+| --cpus-per-task=&#60;number&#62;     | Number of CPUs per task (default is 1)         |
+| --ntasks=&#60;number&#62;            | Number of processes to run (default is 1)      |
+| --nodes=&#60;number&#62;             | Number of nodes on which to run (default is 1) |
+| --ntasks-per-node=&#60;number&#62;   | Number of tasks to invoke on each node         |
+| --partition=&#60;partition_name&#62; | Request specific partition/queue               | 
+*default units for memory is MB, but can be specified explicitly in GB, example `--mem=16GB`.
+
+* a nodes refer to a single compute node or SLURM worker, i.e. one node has 48 CPUs and 256 GB RAM
+* a task is an instance of a running program, generally you will only want one task, unless you use software with MPI support (for example CASA), SLURM works with MPI to manage parallelised processing of data.
+* CPUs refers to the the number of CPUs associated with your job.
+* default parameters, if not specified, include 1 node, 1 task, 1 CPU and 8GB RAM.
