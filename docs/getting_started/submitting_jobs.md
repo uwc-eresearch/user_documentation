@@ -127,14 +127,15 @@ The following table lists the parameters that can be used to decribe the require
 
 | Syntax                               | Meaning                                        | 
 |--------------------------------------|------------------------------------------------|
-| --mem=&#60;number&#62;*              | Minimum amount of memory (default is 8GB)      |
-| --mem-per-cpu=&#60;number&#62;*      | Memory per processor core                      | 
+| --mem=&#60;number&#62;              | Minimum amount of memory (default is 8GB)      |
+| --mem-per-cpu=&#60;number&#62;      | Memory per processor core                      | 
 | --cpus-per-task=&#60;number&#62;     | Number of CPUs per task (default is 1)         |
 | --ntasks=&#60;number&#62;            | Number of processes to run (default is 1)      |
 | --nodes=&#60;number&#62;             | Number of nodes on which to run (default is 1) |
 | --ntasks-per-node=&#60;number&#62;   | Number of tasks to invoke on each node         |
 | --partition=&#60;partition_name&#62; | Request specific partition/queue               | 
-*default units for memory is MB, but can be specified explicitly in GB, example `--mem=16GB`.
+
+**Note** default units for memory is MB, but can be specified explicitly in GB, example `--mem=16GB`.
 
 * a nodes refer to a single compute node or SLURM worker, i.e. one node has 48 CPUs and 256 GB RAM
 * a task is an instance of a running program, generally you will only want one task, unless you use software with MPI support (for example CASA), SLURM works with MPI to manage parallelised processing of data.
