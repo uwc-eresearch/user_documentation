@@ -37,9 +37,10 @@ For Linux users the opensource openconnect VPN client works with the Palo Alto f
 On Ubuntu 18.04:
 
 ```
+sudo add-apt-repository ppa:dwmw2/openconnect
 sudo apt-get update
 sudo apt-get install openconnect
-sudo openconnect --protocol=gp -u <UWC network username> --passwd-on-stdin vpn.uwc.ac.za
+openconnect --protocol=gp vpn.uwc.ac.za
 ```
 
-You will be prompted to enter your password.
+You will be prompted to enter your UWC Network username and password. The UWC Network name will be the same as the username for other UWC services, such as iKamva.
