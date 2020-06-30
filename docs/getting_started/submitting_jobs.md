@@ -26,7 +26,7 @@ Create a shell script, `my_slurm_script.sh` with the following:
 #SBATCH --error=testjob-%j-stderr.log
 
 echo "Submitting SLURM job"
-singularity exec /software/containers/ASTRO-PY.simg python myscript.py
+singularity exec /software/containers/ASTRO-PY3.simg python myscript.py
 ```
 
 The parameters that follow `#SBATCH` indicate the requested resources and other job parameters such as the job name and logging information. The `%j` in the output log file names is a placeholder for the job number or `jobid`. Run the  `sbatch --help` command from the terminal to see additional parameters. Other useful parameters include:
@@ -42,7 +42,7 @@ The parameters that follow `#SBATCH` indicate the requested resources and other 
 * CPUs refers to the the number of CPUs associated with your job.
 * default parameters, if not specified, include 1 node, 1 task, 1 CPU and 8GB RAM.
 
-In the shell script above, the application you wish to run during the job is described by `singularity exec /software/containers/ASTRO-PY.simg python myscript.py`. Here `python` is being used to run `myscript.py` using the python executable within the container `ASTRO-PY.simg`. This is a `singularity` container that is called with the `exec` command to execute the script.
+In the shell script above, the application you wish to run during the job is described by `singularity exec /software/containers/ASTRO-PY3.simg python myscript.py`. Here `python` is being used to run `myscript.py` using the python executable within the container `ASTRO-PY3.simg`. This is a `singularity` container that is called with the `exec` command to execute the script.
 
 The next step is to run the shell script using the SLURM `sbatch` command:
 
@@ -79,10 +79,10 @@ This will place you in an interactive shell (bash) session on a compute node. Th
 You are able to directly run Singularity containers or software within containers using the srun command, for example: 
 
 ```shell
-	$ srun --pty singularity shell /software/containers/ASTRO-PY.simg
+	$ srun --pty singularity shell /software/containers/ASTRO-PY3.simg
 ```
 
-This will open an interactive session on a compute node and open the ASTRO-PY.simg container which includes a large suite of astronomy software. Alternatively, the following command will open an interactive CASA session on a compute node using the casa-stable.img container:
+This will open an interactive session on a compute node and open the ASTRO-PY3.simg container which includes a large suite of astronomy software. Alternatively, the following command will open an interactive CASA session on a compute node using the casa-stable.img container:
 
 ```shell
 	$ srun --pty singularity exec /software/containers/casa-stable.img casa --log2term --nologger
@@ -91,10 +91,10 @@ This will open an interactive session on a compute node and open the ASTRO-PY.si
 Incidently, you can also submit non-interactive jobs to SLURM using the `srun` command without the `--pty` parameter, for example:
 
 ```shell
-	$ srun singularity exec /software/containers/ASTRO-PY.simg python myscript.py
+	$ srun singularity exec /software/containers/ASTRO-PY3.simg python myscript.py
 ```
 
-This will run the Python script `myscript.py` using the ASTRO-PY container on a compute node, similar to the `sbatch` command, however the job will not be run in the background, but will utilize your current terminal.
+This will run the Python script `myscript.py` using the ASTRO-PY3 container on a compute node, similar to the `sbatch` command, however the job will not be run in the background, but will utilize your current terminal.
 
 Note that when using an interactive shell on SLURM by using the `srun` command, your interactive session may be vulnerable to being killed if you lose network connectivity. To avoid this, you can use `tmux` for a persistent terminal that can be reaccessed after the loss of the ssh session. In order to use this feature, `tmux` should be run from the login node before running `srun`. However, when using `tmux`, please make sure to exit the `tmux` session once your interactive session is complete in order to release the resources back to the SLURM pool. Basic `tmux` commands include: 
 
@@ -112,6 +112,45 @@ An example work flow for an interactive session can be described as follows:
 * use the srun command to allocate yourself a compute node, describing your required resources
 * open a Singularity container and run your software.
 
+## Run an interactive session with X11 support
+
+In the event that you wish to use software which provides a GUI, such as `CASA plotms`, you can start an interactive session with `X11 forwarding`. You must `ssh` into the SLURM login node with the `-Y` parameter which sets your DISPLAY variable for trusted `X11 forwarding` and the `-A` parameter for authentication-forwarding to the SLURM login node, for example:
+
+```bash
+	$ ssh -YA <username>@meerkat.uwc.ac.za
+```
+
+From there, you must use `salloc` to allocate a SLURM worker node to yourself as follows:
+
+```bash
+	$ salloc
+```
+
+This will place you in an interactive shell (bash) session on a compute node with `X11 forwarding` enabled. The default resources allocated by the `salloc` command are 1 task, 2 CPU and ~8 GB RAM. You can again adjust what resources are allocated to your interactive session using the parameters such as `--cpus-per-task`, or `--mem`, for example:
+
+```bash
+	$ salloc --cpus-per-task=4 --mem=16GB
+```
+
+You are then able to run a Singularity container and run software that provides a GUI. You can also initiate the session with a command to execute software that requires x11, such as:
+
+```bash
+	$ salloc xmessage "hello from the compute node!"
+```
+
+This should open a xmessage GUI on your desktop where you can see the message above.
+
+When attempting to run `salloc` for an interactive session, you may experience a **Permission denied (publickey)** error. This suggests that that authentication-forwarding is not working correctly. If this is the case, you may need to add your ssh key to your authentication profile on your personal computer. To do this, run the following command from the terminal (not logged onto ilifu), for Ubuntu/Linux operating systems:
+
+```bash
+	$ ssh-add -k
+```
+
+or for Mac OS:
+
+```bash
+	$ ssh-add -K
+```
 
 ## Specifying Resources when running jobs on SLURM
 
